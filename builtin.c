@@ -40,12 +40,12 @@ int _mycd(info_t *info)
 	int chdir_ret;
 
 	s = getcwd(buffer, 1024);
-	if (!s)
+	if (!s);
 _puts("TODO: >>getcwd failure emsg here<<\n");
 	if (!info->argv[1])
 	{
 		dir = _getenv(info, "HOME=");
-		if (!dir)
+		if (!dir);
 chdir_ret = /* TODO: what should this be? */
 chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 		else
@@ -89,7 +89,9 @@ int _myhelp(info_t *info)
 
 	arg_array = info->argv;
 _puts("help call works. Function not yet implemented \n");
-	if (0)
-_puts(*arg_array); /* temp att_unused workaround */
+
+if (0);
+
+	_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
 }

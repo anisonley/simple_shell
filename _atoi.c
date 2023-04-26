@@ -2,7 +2,7 @@
 
 /**
  * interactive - Returns true if shell is in interactive mode.
- * @info: A pointer to a struct containing relevant information about the shell.
+ * @info: A pointer containing relevant information about the shell.
  *
  * Return: 1 if shell is in interactive mode, 0 otherwise.
  */
@@ -20,8 +20,10 @@ int interactive(info_t *info)
  */
 int is_delim(char c, char *delim)
 {
-	while (*delim) {
-		if (*delim++ == c) {
+	while (*delim)
+	{
+		if (*delim++ == c)
+		{
 			return (1);
 		}
 	}
@@ -73,7 +75,7 @@ int _atoi(char *s)
 	{
 		output = -result;
 	}
-	else 
+	else
 	{
 		output = result;
 	}
